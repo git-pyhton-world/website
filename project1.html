@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1-- Usage of Class and ObJects and Functions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+       
+    </nav>
+    <div class="container projects">
+        <h1>My Projects</h1>
+        <div class="project-card">
+            <h2>Project 1</h2>
+            <pre><code class="language-python">
+
+    #det is stored in the form : [n,ac_no,c_id,b_no]
+'''to create account and changevalue of bank accounts using class , objects and user defined function'''
+class Bank :
+
+    #constructor method to store all the primary details in first
+    def __init__(self,det):
+        self.name=det[0]
+        self.account=det[1]
+        self.c_id=det[2]
+        self.b_no=det[3]
+        self.amount=det[4]
+    
+    #method to change a information
+    def change(self,attr_name,new_value) :
+
+        if hasattr(self,attr_name):
+                setattr(self,attr_name,new_value)
+    def view(self) :
+        print(f'''Name of Account holder:{self.name}
+        Account Number                  :{self.account}
+        Customer Id                     :{self.c_id}
+        Branch No                       :{self.b_no}''')
+        
+# d1=['Mazidul',1102010448079,'PNB2020SUK01',27]
+# a1=Bank(d1)
+# a1.view()
+# a1.change('name','MD Mazidul Ilsm')
+# a1.view()
+    
+def getvalue() :
+    n=input('Name:')
+    ac_no=int(input('Account Number :'))
+    c_id=input('Customer Id:')
+    b_no=int(input('Branch Number:'))
+    amount=int(input('Amount:'))
+    det=[n,ac_no,c_id,b_no,amount]
+    return det
+
+def main() :
+    global a1
+    print('to create an account--1')
+    print('To change details : 2')
+    a=int(input('Enter your choice:'))
+    if a==1 :
+        global a1
+        d1=getvalue()
+        a1=Bank(d1)
+    elif a==2 :
+        attr=input('Name of the attribute:')
+        if attr in ['acno','bno','amount'] :
+            value=int(input('Value to replace:'))
+        else :
+            value=input('value to replace:')
+        a1.change(attr,value)
+    else :
+        print('Invalid entry OOPS !! sorry we\'re still developing')
+        
+check='y'
+while check=='y':
+    main()
+    check=input('y or n :')
+
+            </code></pre>
+        </div>
+        
+    </div>
+</body>
+</html>
