@@ -6,42 +6,75 @@ body {
     margin: 0;
     padding: 0;
 }
+
 nav {
     display: flex;
+    flex-wrap: wrap; /* Allows navigation links to stack if needed */
     justify-content: center;
     background-color: #1e1e1e;
-    padding: 15px 0;
+    padding: 15px;
 }
+
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
+    padding: 8px 10px;
 }
+
 nav a:hover {
     text-decoration: underline;
 }
+
 .container {
-    padding: 50px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
+
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    justify-items: center;
 }
+
 .project-card, .blog-post {
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-    margin: 10px auto;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
+
 .social-icons {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 .social-icons a {
-    margin: 0 10px;
+    margin: 5px 10px;
     color: white;
     font-size: 24px;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .projects {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
 }
