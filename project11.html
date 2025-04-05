@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <!-- ✅ Prism CSS Theme -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- ✅ Copy button plugin CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+ 
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="projects.html">PROJECTS</a>
+  </nav>
+
+  <div class="content-block">
+    <h1>INTRODUCTION</h1>
+    <p>User search for a movie and the programme
+    tells all the details of that movie </p>
+    </div>
+  <div>
+      <pre><code class="language-python">
+#project 11
+#Source Code
+from pickle import*
+with open('cinema.dat','wb') as fh :
+    mde1={101:['game of throne','action']}
+    mde2={102:['omar series','religious']}
+    mde3={103:['peaky blinders','thriller']}
+    dump(mde1,fh)
+    dump(mde2,fh)
+    dump(mde3,fh)
+fh.close()
+def mtype(mtype):
+    fho=open('cinema.dat','rb')
+    try:
+        while True :
+            md=load(fho)
+            for key in md :
+                key1=key
+                
+            if md[key1][1]==mtype :
+                print('matched movies are:',end=' ')
+                print(md)
+            
+    except EOFError:
+            print('file has end ')
+
+
+mt=input('monie type:')
+mtype(mt)
+
+
+      </code></pre>
+    </div>
+  
+
+  <!-- ✅ Prism Core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <!-- ✅ Python language component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- ✅ Copy to clipboard plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+</body>
+</html>
