@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <!-- ✅ Prism CSS Theme -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- ✅ Copy button plugin CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+ 
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="projects.html">PROJECTS</a>
+  </nav>
+
+  <div class="content-block">
+    <h1>INTRODUCTION</h1>
+    <p>User will gues a fruit name
+    if it match he won the game and get bonus</p>
+    </div>
+  <div>
+      <pre><code class="language-python">
+#project 4
+import random
+import tkinter as tk
+from tkinter import messagebox
+
+# Initialize the dictionary
+dict1 = {'apple': 'fruit', 'cricket': 'sports'}
+lst = list(dict1.keys())
+str1 = random.choice(lst)
+
+# Function to check the user's input
+def check_guess():
+    user_input = entry.get()
+    if dict1[str1] == user_input:
+        messagebox.showinfo("Result", "You have won!")
+    else:
+        messagebox.showinfo("Result", f"You have lost. The correct answer was: {dict1[str1]}")
+
+# Create the main window
+root = tk.Tk()
+root.title("Nickname Guessing Game")
+root.geometry("400x300")  # Set the size of the window
+
+# Create and place widgets with more styling
+header_label = tk.Label(root, text="Guess the Nickname!", font=("Arial", 20, "bold"))
+header_label.pack(pady=20)
+
+question_label = tk.Label(root, text=f"Match the word: {str1}", font=("Arial", 16))
+question_label.pack(pady=10)
+
+entry = tk.Entry(root, font=("Arial", 14), width=30)
+entry.pack(pady=10)
+
+submit_button = tk.Button(root, text="Submit", font=("Arial", 14), command=check_guess)
+submit_button.pack(pady=20)
+
+# Start the Tkinter event loop
+root.mainloop()
+
+      </code></pre>
+    </div>
+  
+
+  <!-- ✅ Prism Core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <!-- ✅ Python language component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- ✅ Copy to clipboard plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+</body>
+</html>
