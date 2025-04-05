@@ -100,10 +100,10 @@ pre {
     overflow-x: auto;
     width: 100vw; /* Full viewport width */
     position: relative;
-    left: 1%;
-    right: 1%;
-    margin-left: -1vw; /* Center it */
-    margin-right: -1vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw; /* Center it */
+    margin-right: -50vw;
     font-size: 14px;
     line-height: 1.5;
     white-space: pre-wrap;
