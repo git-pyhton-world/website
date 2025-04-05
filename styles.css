@@ -37,13 +37,7 @@ nav a:hover {
     background-color: #333;
 }
 
-/* Layout containers */
-.container {
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 40px;
-}
+
 
 /* Project cards */
 .projects {
