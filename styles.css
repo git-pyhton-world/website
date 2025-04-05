@@ -13,6 +13,7 @@ nav {
     justify-content: center;
     background-color: #1e1e1e;
     padding: 15px;
+    overflow-x: auto;
 }
 
 nav a {
