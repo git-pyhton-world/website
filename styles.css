@@ -92,7 +92,7 @@ nav a:hover {
 
 /* Paragraphs inside the block */
 .content-block p {
-    color: #FFFFFF; /* Black text for paragraph */
+    color: #ffffff ; /* Black text for paragraph */
     font-size: 16px;
     line-height: 1.6;
 }
