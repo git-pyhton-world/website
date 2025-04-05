@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <!-- ✅ Prism CSS Theme -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- ✅ Copy button plugin CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+ 
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="projects.html">PROJECTS</a>
+  </nav>
+
+  <div class="content-block">
+    <h1>INTRODUCTION</h1>
+    <p>Creation of a stack and how 
+    it perform actions</p>
+    </div>
+  <div>
+      <pre><code class="language-python">
+# project 6
+
+stack=[]
+def isempty():
+    if len(stack)==0:
+        return True
+    
+        
+def insert(value):
+    stack.append(value)
+
+            
+    
+insert(10)
+def pop():
+    
+    if isempty()==True:
+        print('VOID STACK')
+    else:
+        stack.pop()
+insert(20)
+pop()
+pop()
+print(pop())
+
+
+
+print(stack)
+
+
+      </code></pre>
+    </div>
+  
+
+  <!-- ✅ Prism Core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <!-- ✅ Python language component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- ✅ Copy to clipboard plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+</body>
+</html>
