@@ -38,7 +38,7 @@ nav a:hover {
 }
 
 /* card holder */
-.card {
+.project-card {
     background-color: #1e1e1e; /* Dark card background */
     border-radius: 12px;
     padding: 20px;
@@ -71,7 +71,7 @@ nav a:hover {
 }
 
 /* content holder*/
-.content {
+.content-block {
     background-color: #121212; /* Dark/blackish background */
     padding: 30px;
     border-radius: 0; /* No rounded corners for edge-to-edge */
