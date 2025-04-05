@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 2 - Finance</title>
+
+  <!-- ✅ Prism CSS Theme -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- ✅ Copy button plugin CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+ 
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="projects.html">PROJECTS</a>
+  </nav>
+
+  <div class="content-block">
+    <h1>INTRODUCTION</h1>
+    <p>Enter a number it will print
+    a square with a side length of
+    that number</p>
+    </div>
+  <div>
+      <pre><code class="language-python">
+#project 1
+n=int(input('Enter the no. of star to be printed in one line:'))
+s=0
+for i in range(n,0,-1):
+    for j in range(0,i):
+        print('*',end=' ')
+    for k in range(n,i+s):
+        print('*',end=' ')
+    s+=2
+    print()
+
+      </code></pre>
+    </div>
+  
+
+  <!-- ✅ Prism Core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <!-- ✅ Python language component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- ✅ Copy to clipboard plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+</body>
+</html>
