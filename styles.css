@@ -1,39 +1,51 @@
+/* Base styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
     color: #ffffff;
     text-align: center;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
+/* Navigation */
 nav {
     display: flex;
-    flex-wrap: wrap; /* Allows navigation links to stack if needed */
+    flex-wrap: wrap;
     justify-content: center;
-    background-color: #1e1e1e;
+    background: linear-gradient(to right, #1e1e1e, #2c2c2c);
     padding: 15px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-size: 18px;
-    padding: 8px 10px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex: 0 0 auto;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: #333;
 }
 
+/* Layout containers */
 .container {
     padding: 30px;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 40px;
 }
 
+/* Project cards */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -41,7 +53,8 @@ nav a:hover {
     justify-items: center;
 }
 
-.project-card, .blog-post {
+.project-card,
+.blog-post {
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
@@ -49,8 +62,10 @@ nav a:hover {
     max-width: 350px;
     margin: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: left;
 }
 
+/* Social icons */
 .social-icons {
     margin-top: 20px;
     display: flex;
@@ -62,46 +77,43 @@ nav a:hover {
     margin: 5px 10px;
     color: white;
     font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
 }
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 10px;
     }
-    
+
+    nav a {
+        font-size: 16px;
+    }
+
     .container {
         padding: 20px;
     }
-    
+
     .projects {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
     }
 }
-.btn {
-
-  display: inline-block;
-
-  padding: 10px 20px;
-
-  background-color: #4CAF50;
-
-  color: white;
-
-  border-radius: 5px;
-
-  text-decoration: none;
-
-  margin-top: 10px;
-
-}
-
-
-.btn:hover {
-
-  background-color: #45a049;
-
-}
-
-
