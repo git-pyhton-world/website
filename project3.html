@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <!-- ✅ Prism CSS Theme -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- ✅ Copy button plugin CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+ 
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="projects.html">PROJECTS</a>
+  </nav>
+
+  <div class="content-block">
+    <h1>INTRODUCTION</h1>
+    <p>The expression given by user will get
+      converted into a prefix notation</p>
+    </div>
+  <div>
+      <pre><code class="language-python">
+# Project 3
+def isoperator(x):
+    if x in '+-*/' :
+        return True
+def posttopre(postexpression):
+    stack=[]
+    for i in range(len(postexpression)) :
+        if isoperator(postexpression[i]) :
+            a=stack.pop()
+            b=stack.pop()
+            temp=postexpression[i]+b+a
+            stack.append(temp)
+        else :
+            stack.append(postexpression[i])
+    ans=''
+    for i in stack:
+        ans+=i
+    return ans
+post=input('Enter postexpression:')
+print('prefix notation is :',posttopre(post))
+      </code></pre>
+    </div>
+  
+
+  <!-- ✅ Prism Core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <!-- ✅ Python language component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- ✅ Copy to clipboard plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+</body>
+</html>
