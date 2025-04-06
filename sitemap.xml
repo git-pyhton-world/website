@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-     <loc>https://git-pyhton-world.github.io/</loc>
+     <loc>https://git-pyhton-world.github.io/website/</loc>
      <lastmod>2025-04-06</lastmod>
      <changefreq>weekly</changefreq>
      <priority>1.00</priority>
    </url>
    <url>
-     <loc>https://git-pyhton-world.github.io/projects.html</loc>
+     <loc>https://git-pyhton-world.github.io/website/projects.html</loc>
      <lastmod>2025-04-06</lastmod>
      <changefreq>monthly</changefreq>
      <priority>0.80</priority>
    </url>
    <url>
-     <loc>https://git-pyhton-world.github.io/blog.html</loc>
+     <loc>https://git-pyhton-world.github.io/website/blog.html</loc>
      <lastmod>2025-04-06</lastmod>
      <changefreq>monthly</changefreq>
      <priority>0.70</priority>
    </url>
    <url>
-     <loc>https://git-pyhton-world.github.io/contact.html</loc>
+     <loc>https://git-pyhton-world.github.io/website/contact.html</loc>
      <lastmod>2025-04-06</lastmod>
      <changefreq>yearly</changefreq>
      <priority>0.50</priority>
