@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 2 - Finance</title>
+
+  <!-- ✅ Prism CSS Theme -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- ✅ Copy button plugin CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+ 
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="projects.html">PROJECTS</a>
+  </nav>
+
+  <div class="content-block">
+    <h1>BASIC OPERATIONS IN NumPy</h1>
+    <p>Arithmetic operations on arrays apply elementwise.
+    On performing the operation a  new array is created<br>
+    1.Subtraction of arrays of same length</p>
+    </div>
+  <div>
+      <pre><code class="language-python">
+a=np.array([5,10,15,20])
+b=np.arange(4)
+c=a-b
+
+        
+      <div class="content-block">
+    <h2>OUTPUT</h2>
+        </div>
+      <div>
+      <pre><code class="language-python">
+[ 5  9 13 17]
+      </code></pre>
+  </div>
+  
+    <div class="content-block">
+    <h1></h1>
+    <h2>2.Addition of NumPy</h2>
+      <p>Conjecent Values get add</p>
+    </div> 
+        
+    <pre><code class="language-python">
+a=np.array([5,10,15,20])
+b=np.arange(4)
+c=a+b
+print(c)
+    </code></pre>
+  <div class="content-block">
+  <h2>OUTPUT</h2>
+  </div>
+        <pre><code>
+[ 5 11 17 23]
+        </code></pre>
+
+  <!-- ✅ Prism Core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <!-- ✅ Python language component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- ✅ Copy to clipboard plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+</body>
+</html>
