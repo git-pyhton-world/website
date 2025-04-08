@@ -29,7 +29,7 @@
     </div>
   <div>
       <pre><code class="language-python">
-        # Learning numpy an impkortant library of python 
+# Learning numpy an impkortant library of python 
 # used in scientific calculations
 # used in business calculation
 # impoting the library numpy
@@ -47,17 +47,45 @@ np.array() takes exactly one argument
 a=np.array(1,2,3,4) #wrong
 
 
-array transforms sepuences of sequences into 2 diemsional
-3 dimensional and so on.
+#array transforms sepuences of sequences into 2 diemsional
+#3 dimensional and so on.
 c=np.array([[1.2,2,3],[4,5,6]])
 print(c)
-outputa
+#output
 [[1.2 2.  3. ]
  [4.  5.  6. ]]
 #type of array can be mentioned in a explicit way
 d=np.array([[1,2],[3,4]],dtype=complex)
 print(d)
+        
+# The function zeros creates an array full of zeeros
+# The function empty creates an array with random initial content
+# The funtion ones creates an array full of ones
+import numpy as np
+print(np.zeros((2,3)))
+print(np.ones((3,2)))
+print(np.empty((1,2)))
+# These above mention all functions takes a tuple as an argument
+# Output
+[[0. 0. 0.]
+ [0. 0. 0.]]
 
+[[1. 1.]
+ [1. 1.]
+
+ [1. 1.]]
+[[0. 0.]]
+
+# The default data type is float type
+# The Data type can be changed
+        
+# To print a list full of any specific integer
+# Let assume a is any integer
+arr=np.ones((3,3))*a# the tuple(3,3 ) creates 
+print(arr)           # an 2 axes (2 dimensions) array
+                     #of 3 column and 3 rows
+# Alternative Method  #(3,3) is also called the shpe
+ arr=np.full((3,3),a)
       </code></pre>
     </div>
   
