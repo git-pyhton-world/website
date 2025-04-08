@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project 2 - Finance</title>
+  <title>Creation of array</title>
 
   <!-- ✅ Prism CSS Theme -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -23,32 +23,53 @@
 
   <div class="content-block">
     <h1>CREATION OF ARRAY</h1>
-    <p>A numpy array is a same data type list of any dimension(1D,2D,3D...)
+    <p>A numpy array is a same data type list of any dimension(1D,2D,3D...)<br>
     It work fast than the python list and use less storage and it's vectorized i.e. doesn't use 
     loop for operations in it.</p>
     </div>
   <div>
+    <div class="project-card">
+            <h2></h2>
+            <p>Learning numpy an impkortant library of python<br> 
+used in scientific calculations<br>
+used in business calculation<br>
+impoting the library numpy</p>
+            <a href='numpy/createarray.html' class='btn'>VIEW </a>
+        </div>
       <pre><code class="language-python">
-# Learning numpy an impkortant library of python 
-# used in scientific calculations
-# used in business calculation
-# impoting the library numpy
+
 import numpy as np
-# creation of the array
-#1.by using a regular tuple or list of python
-a=np.array((1,2,3))
+<pre></code>
+        <div class="content-block">
+          <h2></h2>
+          <p>creation of the array<br>
+1.by using a regular tuple or list of python</p>
+          </div>
+<pre><code class="language-python">
+a=np.array((1,2,3)) # by using a tuple
 print(a)
-b=np.array([1,2,3])
+b=np.array([1,2,3]) # by using a list
 print(b)
-#output
+</pre></code>
+<div class="content-block">
+<h2>OUTPUT</h2>
+  </div>
+<pre><code class="language-python">
 [1 2 3]
 [1 2 3]
+
+</pre></code>
+<div class="content-block">
+  <p>
 np.array() takes exactly one argument
+  </p>
+<pre><code class="language-python">
 a=np.array(1,2,3,4) #wrong
-
-
-#array transforms sepuences of sequences into 2 diemsional
-#3 dimensional and so on.
+</pre></code>
+<div class="content-block">
+<p>array transforms sepuences of sequences into 2 diemsional
+dimensional and so on.</p>
+<pre><code class='language-python'>
 c=np.array([[1.2,2,3],[4,5,6]])
 print(c)
 #output
