@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1 - Pandas Excel Import</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="../index.html">HOME</a>
+    <a href="../projects.html">PROJECTS</a>
+  </nav>
+
+  <div class="content-block">
+    <h1>Pandas Project: Reading Excel Data</h1>
+    <p>This project demonstrates how to use the pandas library to import and explore Excel data using a real estate dataset from Assam.</p>
+  </div>
+
+  <div class="content-block">
+    <h2>Function: Load and Describe Excel Data</h2>
+    <p>This function loads the Excel sheet, prints preview data, and gives structure and statistics of the data.</p>
+  </div>
+
+  <div class="content-block">
+    <h2>Function Code</h2>
+    <pre><code class="language-python">
+def explore_excel_data(file_path):
+    import pandas as pd
+    pd.set_option('display.max_columns', None)
+
+    data = pd.read_excel(
+        file_path,
+        sheet_name="Sheet1",
+        nrows=20,
+        usecols="A:C",
+        skiprows=2
+    )
+
+    print("First 4 rows:")
+    print(data.head(4))
+
+    print("Last 5 rows:")
+    print(data.tail())
+
+    print("Data information:")
+    print(data.info())
+
+    print("Data description:")
+    print(data.describe())
+
+    print("Index:")
+    print(data.index)
+
+    return data
+    </code></pre>
+  </div>
+
+  <div class="content-block">
+    <h2>Commentary</h2>
+    <p>This project focuses on using the pandas library to explore Excel data. The function begins by configuring pandas to display all columns of the dataset without truncation. It then loads a specific sheet named "Sheet1" from the Excel file, restricting to the first 20 rows and columns A to C only, while skipping the first two header rows.</p>
+    <p>The output includes the first four and the last five rows to give a preview of how the data looks at both ends. Then, it uses <code>info()</code> to display metadata like column names, non-null entries, and data types. <code>describe()</code> provides a statistical summary of numeric fields or unique/object statistics where applicable. Finally, <code>data.index</code> shows the index range of the dataset.</p>
+    <p>The function returns the DataFrame so it can be used for further analysis or visualizations in other parts of the project.</p>
+  </div>
+
+  <div class="content-block">
+    <h2>Expected Output (Sample Preview)</h2>
+    <pre><code class="language-python">
+  Project Name    Promoter Name       Project Type
+0  Project A      ABC Developers     Residential
+1  Project B      XYZ Builders       Commercial
+2  Project C      DEF Infra          Residential
+3  Project D      GHI Constructions  Mixed Use
+...
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 20 entries, 0 to 19
+Data columns (total 3 columns):
+ #   Column         Non-Null Count  Dtype
+---  ------         --------------  -----
+ 0   Project Name   20 non-null     object
+ 1   Promoter Name  20 non-null     object
+ 2   Project Type   20 non-null     object
+    </code></pre>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+</body>
+</html>
